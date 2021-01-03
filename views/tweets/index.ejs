@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweeter</title>
+</head>
+
+<body>
+    <h1>Tweeter</h1>
+
+    <ul>
+        <% for(let t of tweets) { %>
+            <li>
+                <%= t.tweet %> - <b>
+                        <%= t.username %>
+                    </b> <a href="/tweets/<%=t.id%>">View</a>
+            </li>
+            <% } %>
+    </ul>
+
+    <a href="/tweets/new">Create a new tweet</a>
+
+</body>
+
+</html>

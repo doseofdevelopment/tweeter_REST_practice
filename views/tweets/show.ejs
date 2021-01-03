@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=tweet.username%>'s Tweet
+    </title>
+</head>
+
+<body>
+    <h1>Tweet #<%=tweet.id%>
+    </h1>
+    <h2>
+        <%=tweet.tweet%> - <b>
+                <%=tweet.username%>
+            </b>
+    </h2>
+    <a href="/tweets">Back to Tweeter</a>
+    <a href="/tweets/<%=tweet.id%>/edit">Edit Tweet</a>
+    <form action="/tweets/<%=tweet.id%>?_method=DELETE" method="POST">
+        <button>Delete Tweet</button>
+    </form>
+
+
+</body>
+
+</html>
